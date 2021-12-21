@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      font-family: 'Raleway', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      background-color: hsl(229, 57%, 11%);
+      background-image: url(images/bg-desktop.png);
+      background-position: 0 230px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 470px;
+      box-sizing: border-box;
+    }
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 830px;
+    }
+
+    /*main*/
+    .container .main{
+      width: 230px;
+      background-color: hsl(228, 56%, 26%);
+      border-radius: 10px 80px 10px 10px;
+      padding: 40px 30px;
+    }
+    .container .main .logo{
+      width: 120px;
+    }
+    .container .main .menu{
+      margin: 20px 0 0 0;
+      width: 145px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .container .main .menu a{
+      height: 40px;
+      width: 40px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container .main .menu img{
+      width: 45%;
+    }
+
+    /*desc*/
+    .container .desc{
+      background-color: hsl(228, 56%, 26%);
+      border-radius: 10px;
+      padding: 15px 30px;
+      position: relative;
+    }
+    .container .desc .title{
+      font-weight: 400;
+    }
+    .container .desc .title span{
+      font-weight: 700;
+    }
+    .container .desc .left{
+      font-weight: 700;
+      background-color: #fff;
+      position: absolute;
+      right: 30px;
+      top: -60px;
+      padding: 20px;
+      border-radius: 10px;
+      color: hsl(229, 7%, 55%);
+    }
+    .container .desc .left span{
+      color: #000;
+      font-size: 30px;
+    }
+    .container .desc .progress{
+      height: 15px;
+      width: 450px;
+      background-color: hsl(229, 57%, 11%);
+      border-radius: 15px;
+    }
+    .container .desc .progress .bar{
+      height: 12px;
+      width: 300px;
+      background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%) );
+      border-radius: 15px;
+      position: relative;
+    }
+    .container .desc .progress .bar .circle{
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+    }
+    .container .desc .numb{
+      font-weight: 700;
+      display: flex;
+      width: 450px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 375px){
+      body{
+        background-image: url(images/bg-mobile.png);
+        font-family: 'Raleway', sans-serif;
+        background-position: 0 0;
+      }
+      .container{
+        height: 340px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+      }
+
+      /*main*/
+      .container .main{
+        padding: 
+      }
+
+      /*desc*/
+      .container .desc{
+        max-width: 350px;
+        padding: 20px;
+        position: relative;
+      }
+      .container .desc .title{
+        text-align: center;
+      }
+      .container .desc .left{
+        position: absolute;
+        margin: 0 auto;
+        top: 120px;
+        right: 70px;
+
+        /*display: none;*/
+        /*bottom: -60px;*/
+      }
+      .container .desc .progress{
+        margin: 0 auto;
+        width: 250px;
+      }
+      .container .desc .progress .bar{
+        width: 180px;
+      }
+      .container .desc .numb{
+        width: 250px;
+      }
+
+      .attribution { display: none }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main">
+      <img class="logo" src="images/logo.svg" alt="logo">
+      <div class="menu">
+        <a href="#"><img class="icon-document" src="images/icon-document.svg" alt="icon-document"></a>
+        <a href="#"><img class="icon-folder" src="images/icon-folder.svg" alt="icon-folder"></a>
+        <a href="#"><img class="icon-upload" src="images/icon-upload.svg" alt="icon-upload "></a>
+      </div>
+    </div>
+    <div class="desc">
+      <p class="title">You’ve used <span>815 GB</span> of your storage</p>
+      <p class="left"><span>185</span> GB Left</p>
+      <div class="progress">
+        <div class="bar">
+          <div class="circle"></div>
+        </div>
+      </div>
+      <div class="numb">
+        <p>0 GB</p>
+        <p>1000 GB</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdullah Al-Karim</a>.
+  </div>
+</body>
+</html>
